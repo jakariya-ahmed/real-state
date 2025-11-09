@@ -28,7 +28,9 @@
   .pera {
     @apply text-[17px] text-neutral-dark font-heading;
   }
-
+.bg-dark {
+  @apply bg-secondary-dark;
+}
 
 }
 
@@ -39,7 +41,7 @@
 
 .btn-primary {
   /* default style  */
-  @apply relative overflow-hidden w-full capitalize text-white font-medium px-4 py-2 transition-all;
+  @apply relative overflow-hidden cursor-pointer w-full capitalize text-white font-medium px-4 py-2 transition-all;
 
   /* hover effect  */
   background: linear-gradient(to right, theme('colors.secondary.default') 50%, theme('colors.primary.default') 50%);
@@ -53,6 +55,23 @@
   background-position: left bottom;
   /* color: theme('colors.primary.default'); */
 }
+
+.btn-secondary {
+    /* default style  */
+  @apply relative overflow-hidden cursor-pointer w-full capitalize text-white font-semibold px-4 py-2 transition-all duration-150;
+
+  /* hover effect  */
+  background: linear-gradient(to right, theme('colors.background.light') 50%, theme('colors.primary.default') 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: background-position 0.4s ease-in;
+}
+
+.btn-secondary:hover {
+  background-position: left bottom;
+  color: theme('colors.secondary.default');
+}
+
 
 
 /* input field  */
@@ -81,11 +100,26 @@
 /* utilities css  */
 @layer utilities {
   .container {
-    @apply max-width-8xl mx-auto px-4;
+    @apply max-w-7xl mx-auto px-4;
   }
 
   .section-spacing {
     @apply py-6 sm:py-20;
   }
+  
+  @keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.3s ease forwards;
+}
 
 }
