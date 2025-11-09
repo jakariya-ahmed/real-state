@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* base css  */
+@layer base {
+  body {
+    @apply bg-neutral-light text-secondary-light font-sans;
+  }
+
+  .dark body {
+    @apply bg-background-dark text-gray-100;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-secondary-dark;
+  }
+
+  h1 { @apply text-4xl md:text-5xl font-bold }
+  h2 { @apply text-3xl md:text-4xl font-semibold}
+  h3 { @apply text-2xl font-semibold}
+  h4 { @apply text-[17px] leading-relaxed text-neutral-dark}
+
+  a {
+    @apply text-secondary-dark hover:text-primary-default;
+  }
+
+  .pera {
+    @apply text-[17px] text-neutral-dark font-heading;
+  }
+
+
+}
+
+
+/* component css  */
+@layer components {
+  /* button  */
+
+.btn-primary {
+  /* default style  */
+  @apply relative overflow-hidden w-full capitalize text-white font-medium px-4 py-2 transition-all;
+
+  /* hover effect  */
+  background: linear-gradient(to right, theme('colors.secondary.default') 50%, theme('colors.primary.default') 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: background-position 0.4s ease;
+
+}
+
+.btn-primary:hover {
+  background-position: left bottom;
+  /* color: theme('colors.primary.default'); */
+}
+
+
+/* input field  */
+  .input {
+    @apply w-full px-4 py-2 border border-neutral-dark border-gray-300 rounded-lg bg-white
+    text-secondary-dark focus:ring-1 focus:ring-primary-default outline-none transition-all duration-150;
+  }
+
+.input-dark { @apply dark:bg-secondary-dark dark:text-neutral-light}
+  .card {
+    @apply bg-white dark:bg-neutral-light rounded-xl p-4 hover:shadow-card-hover transition-shadow;
+  }
+
+  .nav-link {
+    @apply text-neutral-dark hover:text-primary-default font-medium;
+  }
+
+  .footer-link {
+    @apply text-neutral-dark hover:text-primary-default text-sm;
+  }
+
+
+}
+
+
+/* utilities css  */
+@layer utilities {
+  .container {
+    @apply max-width-8xl mx-auto px-4;
+  }
+
+  .section-spacing {
+    @apply py-6 sm:py-20;
+  }
+
+}
