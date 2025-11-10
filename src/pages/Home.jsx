@@ -1,7 +1,7 @@
 import AboutCom from "../components/AboutCom";
 import CounterCom from "../components/CounterCom";
-import Header from "../components/home/header/Header";
-import HeroSlider from "../components/home/hero/HeroSlider";
+import FeaturedListings from "../components/home/Listing";
+import Services from "../components/home/Services";
 import TodaySell from "../components/home/TodaySell";
 
 
@@ -21,6 +21,15 @@ export default function Home() {
             {/* Toady Sells Properties  */}
             <div className="container">
                 <TodaySell /> 
+            </div>
+
+            {/* Counter Section  */}
+            <div className="bg-background-light">
+                <Services />
+            </div>
+
+            <div>
+                <FeaturedListings /> 
             </div>
             
         </>

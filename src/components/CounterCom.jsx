@@ -12,7 +12,7 @@ export default function CounterCom() {
 
   return (
     <section className="py-20">
-      <div className="container mx-auto grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
+      <div className="w-full lg:container mx-auto grid grid-cols-2 sm:grid-cols-4 gap-2 lg:gap-8 text-center">
         {counters.map((item, index) => {
           const Icon = item.icon;
           return (

@@ -3,10 +3,10 @@ import { CoffeeIcon, HousePlusIcon, LockIcon, Sunrise } from "lucide-react";
 export default function AboutCom() {
     return (
         <div className="section-spacing flex flex-col items-center md:flex-row gap-y-4 md:gap-x-6">
-            <div className="w-[45%]">
+            <div className="w-full lg:w-[45%]">
                 <img src="img/about.png" className="w-full" alt="about" />
             </div>
-            <div className="w-[55%] md:ml-6">
+            <div className="w-full lg:w-[55%] md:ml-6">
                 <span className="sm-title">About US </span>
                 <h1 className="my-5 big-title text-secondary-dark leading-tight">The Leading Real Estate Rental Marketplace.</h1>
                 <p className="pera">
