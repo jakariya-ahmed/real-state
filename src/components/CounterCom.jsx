@@ -25,15 +25,15 @@ export default function CounterCom() {
               className="flex flex-col items-center"
             >
               {/* Icon */}
-              <div className="mb-3">
+              <div className="mb-6">
                 <Icon className="text-primary-default bg-primary-light w-14 h-14 p-3 rounded-full" />
               </div>
 
               {/* Counter */}
-              <h2 className="text-4xl font-extrabold mb-2">
+              <h1 className="mb-2">
                 <CountUp end={item.value} duration={2.5} separator="," />
                 {item.suffix ? item.suffix : "+"}
-              </h2>
+              </h1>
 
               {/* Label */}
               <p className="text-secondary-light font-semibold text-sm sm:text-base tracking-wide leading-snug">
