@@ -91,11 +91,9 @@ export default function FeaturedListings() {
     <section className="py-16 bg-gray-50 relative">
       {/* Section Header */}
       <div className="text-center mb-12">
-        <h4 className="text-amber-500 font-semibold uppercase tracking-widest">
-          Properties
-        </h4>
-        <h2 className="text-4xl md:text-5xl font-extrabold text-[#14213D] mt-2">
-          Featured Listings
+        <span className="mb-4 sm-title">Property Listing </span>
+        <h2 className="text-4xl md:text-5xl font-extrabold text-[#1b2a4a] mt-2">
+          Featured Apartments
         </h2>
       </div>
 
@@ -118,12 +116,12 @@ export default function FeaturedListings() {
             640: { slidesPerView: 1 },
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
-            1280: { slidesPerView: 4 },
+            1280: { slidesPerView: 3 },
           }}
         >
           {listings.map((item) => (
             <SwiperSlide key={item.id}>
-              <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+              <div className="bg-white overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
                 {/* Image */}
                 <div className="relative">
                   <img
