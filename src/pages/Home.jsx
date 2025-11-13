@@ -1,5 +1,6 @@
 import AboutCom from "../components/AboutCom";
 import CounterCom from "../components/CounterCom";
+import Aminities from "../components/home/Aminities";
 import FloorPlans from "../components/home/FloorPlans";
 import FeaturedListings from "../components/home/Listing";
 import Services from "../components/home/Services";
@@ -35,6 +36,10 @@ export default function Home() {
             {/* Apartment Floor Planing  */}
             <div className="container">
                 <FloorPlans /> 
+            </div>
+
+            <div className="bg-background-ligh ">
+                <Aminities />
             </div>
             
         </>
